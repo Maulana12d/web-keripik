@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Nayy keripik singkong - Toko Makanan Ringan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ece8e8;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+            overflow-x: hidden;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        header {
+            transform: translateY(-100%);
+            animation: slideDown 0.8s ease-out 0.3s forwards;
+        }
+        
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('gambar/Banner Nayy Keripik SIngkong (1).png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            transform: scale(1.1);
+            animation: zoomOut 1.2s ease-out forwards;
+        }
+        
+        @keyframes zoomOut {
+            from { transform: scale(1.1); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        .hero-content {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s ease-out 0.8s forwards;
+        }
+        
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .section-title {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s ease-out forwards;
+        }
+        
+        .snack-card {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .snack-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .feature-item {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-red-600 text-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-1xl font-bold">🍪 Nayy keripik singkong</span>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="hover:text-amber-200 transition duration-300">Beranda</a></li>
+                    <li><a href="#" class="hover:text-amber-200 transition duration-300">Produk</a></li>
+                    <li><a href="isi.html" class="hover:text-amber-200 transition duration-300">Tentang Kami</a></li>
+                    <li><a href="https://wa.me/6287748343592" class="hover:text-amber-200 transition duration-300">Kontak</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-32">
+        <div class="container mx-auto px-4 text-center hero-content">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Makanan Ringan Berkualitas</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Temukan berbagai macam snack lezat dengan harga terjangkau</p>
+            <button class="bg-red-500 hover:bg-amber-400 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105 active:scale-95">
+                Lihat Produk
+            </button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 text-gray-800 section-title" style="animation-delay: 0.5s">Produk Unggulan Kami</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="snack-card bg-white rounded-lg overflow-hidden shadow-md" style="animation-delay: 0.6s">
+                    <img src="gambar/WhatsApp Image 2025-06-19 at 09.39.40.jpeg" alt="Keripik Kentang" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Keripik Kentang Original</h3>
+                        <p class="text-gray-600 mb-4">Keripik kentang renyah dengan rasa original yang gurih.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-lg">Rp 15.000</span>
+                            <button class="bg-red-500 hover:bg-amber-400 text-white px-4 py-2 rounded-full text-sm transition duration-300 transform hover:scale-105 active:scale-95">
+                                + Keranjang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="snack-card bg-white rounded-lg overflow-hidden shadow-md" style="animation-delay: 0.7s">
+                    <img src="gambar/WhatsApp Image 2025-06-19 at 09.39.41.jpeg" alt="Kacang Almond" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Kacang Almond Panggang</h3>
+                        <p class="text-gray-600 mb-4">Kacang almond premium panggang dengan sedikit garam.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-lg">Rp 25.000</span>
+                            <button class="bg-red-500 hover:bg-amber-400 text-white px-4 py-2 rounded-full text-sm transition duration-300 transform hover:scale-105 active:scale-95">
+                                + Keranjang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="snack-card bg-white rounded-lg overflow-hidden shadow-md" style="animation-delay: 0.8s">
+                    <img src="gambar/WhatsApp Image 2025-06-19 at 09.39.42.jpeg" alt="Biskuit Coklat" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Biskuit Lapis Coklat</h3>
+                        <p class="text-gray-600 mb-4">Biskuit renyah dengan lapisan coklat yang lezat.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-lg">Rp 12.000</span>
+                            <button class="bg-red-500 hover:bg-amber-400 text-white px-4 py-2 rounded-full text-sm transition duration-300 transform hover:scale-105 active:scale-95">
+                                + Keranjang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 4 -->
+                
+                <!-- Product Card 5 -->
+                                
+                <!-- Product Card 6 -->
+                            
+            <div class="center mt-12">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Kenapa Memilih Kami?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="bg-amber-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Kualitas Terjamin</h3>
+                    <p class="text-gray-600">Produk kami dibuat dengan bahan-bahan berkualitas tinggi dan proses produksi yang higienis.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-amber-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Harga Terjangkau</h3>
+                    <p class="text-gray-600">Kami menawarkan produk berkualitas dengan harga yang bersaing dan terjangkau.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-amber-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Pengiriman Cepat</h3>
+                    <p class="text-gray-600">Pesanan Anda akan kami proses dan kirim secepat mungkin dengan kemasan yang aman.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">🍪 Nayy keripik singkong</h3>
+                    <p>Toko makanan ringan berkualitas dengan berbagai pilihan rasa yang lezat dan harga terjangkau.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-amber-400 transition duration-300">Beranda</a></li>
+                        <li><a href="#" class="hover:text-amber-400 transition duration-300">Produk</a></li>
+                        <li><a href="#" class="hover:text-amber-400 transition duration-300">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-amber-400 transition duration-300">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">alamat kami </h4>
+                    <ul class="space-y-2">
+                        <li>Jl. Makanan Ringan No. 123</li>
+                        <li>cilegon, Indonesia</li>
+                        <li>keripiknay.com</li>
+                        <li>+6287748343592</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/nayy_keripiksingkong?igsh=eGdrb3RicG80cmQ2" class="hover:text-amber-400 transition duration-300 transform hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="hover:text-amber-400 transition duration-300 transform hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                            <a href="https://maps.app.goo.gl/WTXrW4EyxvGNoDwf9" class="hover:text-amber-400 transition duration-300 transform hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6"><path fill-rule="evenodd" d="M8.161 2.58a1.875 1.875 0 0 1 1.678 0l4.993 2.498c.106.052.23.052.336 0l3.869-1.935A1.875 1.875 0 0 1 21.75 4.82v12.485c0 .71-.401 1.36-1.037 1.677l-4.875 2.437a1.875 1.875 0 0 1-1.676 0l-4.994-2.497a.375.375 0 0 0-.336 0l-3.868 1.935A1.875 1.875 0 0 1 2.25 19.18V6.695c0-.71.401-1.36 1.036-1.677l4.875-2.437ZM9 6a.75.75 0 0 1 .75.75V15a.75.75 0 0 1-1.5 0V6.75A.75.75 0 0 1 9 6Zm6.75 3a.75.75 0 0 0-1.5 0v8.25a.75.75 0 0 0 1.5 0V9Z" clip-rule="evenodd" />
+</svg>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6">
+                <p>&copy; 2025 keripik nay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('button.md\\:hidden');
+            const navMenu = document.querySelector('nav.hidden');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                navMenu.classList.toggle('hidden');
+                navMenu.classList.toggle('block');
+                navMenu.classList.add('absolute', 'top-16', 'right-4', 'bg-amber-600', 'p-4', 'rounded-md', 'shadow-lg');
+                
+                if (!navMenu.querySelector('ul').classList.contains('flex-col')) {
+                    navMenu.querySelector('ul').classList.add('flex-col', 'space-y-3');
+                }
+            });
+            
+            // Animate snack cards on scroll
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.snack-card, .feature-item');
+                
+                elements.forEach((element) => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.style.animation = `fadeUp 0.8s ease-out ${element.getAttribute('style') ? parseFloat(element.getAttribute('style').split('animation-delay: ')[1].split('s')[0]) : 0}s forwards`;
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', animateOnScroll);
+            
+            // Trigger initial check for elements already in view
+            animateOnScroll();
+            
+            // Add cursor effect to buttons
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('mousedown', () => {
+                    button.classList.add('active:scale-95');
+                    setTimeout(() => {
+                        button.classList.remove('active:scale-95');
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
